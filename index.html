@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blends | inicio</title>
+
+  <link rel="icon" type="image/png" href="Media/Logo%20b.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="site-shell">
+
+    <header class="navbar">
+      <nav class="nav-inner">
+        <a href="#" class="nav-logo-link">
+          <img
+            src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Logo%20negro%20Blends.png?raw=true"
+            alt="Blends Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="redes-sociales.html">Redes Sociales</a></li>
+          <li><a href="todas-las-colecciones.html">Todas las Colecciones</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <img
+          src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Banner.png?raw=true"
+          alt="Blends Hero"
+          class="hero-img"
+        />
+      </section>
+
+      <section class="collection-section" id="fiore">
+        <div class="section-header">
+          <span class="section-label">Nueva Temporada</span>
+          <h2 class="section-title">The Fiore Collection</h2>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product-card product-card--fiore buy-trigger" data-product="fiore" aria-label="Comprar gorra The Fiore">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/The%20fiore.png?raw=true"
+                alt="Gorra The Fiore"
+                class="product-img product-img-main"
+                loading="lazy"
+              />
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/The%20fiore%20trasera.png?raw=true"
+                alt="Gorra The Fiore en hover"
+                class="product-img product-img-hover"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-name">The Fiore</p>
+              <p class="product-price">$79.900</p>
+            </div>
+          </article>
+
+          <article class="product-card product-card--fiore buy-trigger" data-product="club" aria-label="Comprar gorra Club Blend">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Club%20blend.png?raw=true"
+                alt="Gorra Club Blend"
+                class="product-img product-img-main"
+                loading="lazy"
+              />
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/club%20blen%20trasera.png?raw=true"
+                alt="Gorra Club Blend en hover"
+                class="product-img product-img-hover"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-name">Club Blend</p>
+              <p class="product-price">$79.900</p>
+            </div>
+          </article>
+
+          <article class="product-card product-card--fiore buy-trigger" data-product="fiorepack">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/blends%20pack%20v2.png?raw=true"
+                alt="The Fiore Collection Pack"
+                class="product-img product-img-main"
+                loading="lazy"
+              />
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/pack%20hover.png?raw=true"
+                alt="Fiore Collection Pack en hover"
+                class="product-img product-img-hover"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-name">Fiore Collection Pack</p>
+              <p class="product-price">$143.820</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="model-banner model-banner--alt">
+        <div class="model-banner-inner">
+          <img
+            src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Se%20parte%20del%20club.png?raw=true"
+            alt="Modelo con Club Blend"
+            class="model-banner-img"
+            loading="lazy"
+          />
+          <div class="model-banner-caption model-banner-caption--right">
+            <span class="caption-label">Club Blend</span>
+            <p class="caption-text">Se parte del club</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-section sold-out-section" id="summer">
+        <div class="section-header">
+          <span class="section-label sold-out-label">Colección Anterior</span>
+          <h2 class="section-title">Summer Collection</h2>
+          <span class="sold-out-badge">SOLD OUT</span>
+        </div>
+
+        <div class="product-grid product-grid--five">
+
+          <article class="product-card sold-out">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Gorra%20Beige.png?raw=true"
+                alt="Gorra Beige"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="sold-out-tag">Agotado</span>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Summer Beige</p>
+              <p class="product-price">$30.000</p>
+            </div>
+          </article>
+
+          <article class="product-card sold-out">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Gorra%20Gris.png?raw=true"
+                alt="Gorra Gris"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="sold-out-tag">Agotado</span>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Summer Grey</p>
+              <p class="product-price">$30.000</p>
+            </div>
+          </article>
+
+          <article class="product-card sold-out">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Gorra%20azul%20flor.png?raw=true"
+                alt="Gorra Azul Eléctrico con Flor"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="sold-out-tag">Agotado</span>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Electric Blue Flor</p>
+              <p class="product-price">$30.000</p>
+            </div>
+          </article>
+
+          <article class="product-card sold-out">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Gorra%20azul%20frontal.png?raw=true"
+                alt="Gorra Azul Eléctrico BLN Naranja"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="sold-out-tag">Agotado</span>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Electric Blue BLN</p>
+              <p class="product-price">$30.000</p>
+            </div>
+          </article>
+
+          <article class="product-card sold-out">
+            <div class="product-img-wrap">
+              <img
+                src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Gorra%20azul%20oscuro%20frontal.png?raw=true"
+                alt="Gorra Azul Oscuro"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="sold-out-tag">Agotado</span>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Deep Blue</p>
+              <p class="product-price">$30.000</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="summer-models-banner">
+        <div class="section-header">
+          <span class="section-label sold-out-label">Archivo</span>
+          <h2 class="section-title section-title--sm">Summer drop temporada pasada</h2>
+        </div>
+
+        <div class="summer-models-grid">
+
+          <div class="summer-model-item summer-model-item--large">
+            <img
+              src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Modelo%20con%20gorra%20azul%20agotada.jpg?raw=true"
+              alt="Modelo gorra azul eléctrica"
+              class="summer-model-img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="summer-model-item">
+            <img
+              src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Modelo%20con%20gorra%20beige%20agotada.jpg?raw=true"
+              alt="Modelo gorra beige"
+              class="summer-model-img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="summer-model-item">
+            <img
+              src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Modelo%20con%20gorra%20azul%20oscuro%20agotada.jpg?raw=true"
+              alt="Modelo gorra azul oscuro"
+              class="summer-model-img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="summer-model-item summer-model-item--detail">
+            <img
+              src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/blends%20bordado%20en%20gorra%20agotada%20(1).jpg?raw=true"
+              alt="Detalle bordado Blends"
+              class="summer-model-img"
+              loading="lazy"
+            />
+            <div class="detail-overlay">
+              <span>Detalle Bordado</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="video-editorial">
+        <div class="video-editorial-ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span>FIORE NEW COLLECTION • DESCUENTOS EN CARTAGENA • </span>
+            <span>FIORE NEW COLLECTION • DESCUENTOS EN CARTAGENA • </span>
+            <span>FIORE NEW COLLECTION • DESCUENTOS EN CARTAGENA • </span>
+            <span>FIORE NEW COLLECTION • DESCUENTOS EN CARTAGENA • </span>
+          </div>
+        </div>
+
+        <div class="video-editorial-frame">
+          <video
+            class="video-editorial-bg"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+          >
+            <source src="Media/BLENDS.mp4" type="video/mp4" />
+          </video>
+
+          <div class="video-editorial-overlay"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer" id="social">
+      
+      <div class="footer-top-identity">
+        <img
+          src="https://github.com/Lggslemi/Desarrollo-de-Web-Unidad-1/blob/main/Logo%20negro%20Blends.png?raw=true"
+          alt="Blends Logo"
+          class="footer-logo"
+        />
+        <div class="footer-social-row">
+          <a href="#" class="footer-social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.528 1.975 14.063.953 11.453.953c-5.44 0-9.866 4.371-9.87 9.8-.001 1.74.47 3.426 1.365 4.9l-.38 1.382 1.45-.376zm13.134-5.28c-.104-.173-.382-.277-.8-.483-.417-.206-2.465-1.215-2.847-1.353-.382-.137-.66-.206-.938.206-.278.412-1.077 1.353-1.32 1.629-.243.277-.487.31-.904.103-.417-.206-1.762-.649-3.357-2.071-1.242-1.107-2.08-2.473-2.324-2.885-.244-.412-.026-.635.18-.84.186-.184.417-.487.626-.731.209-.244.278-.417.417-.696.14-.279.07-.522-.035-.729-.104-.206-.938-2.26-1.285-3.097-.338-.813-.683-.703-.938-.716-.243-.014-.522-.016-.8-.016-.278 0-.73.104-1.113.522-.383.417-1.46 1.428-1.46 3.483s1.495 4.04 1.704 4.318c.209.278 2.942 4.493 7.129 6.297 1 .429 1.779.686 2.387.878 1.004.319 1.918.274 2.64.167.805-.12 2.466-.993 2.813-1.954.348-.962.348-1.785.244-1.958z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.05 1.69 4.18 1.12 1.11 2.7 1.69 4.25 1.78v3.91c-1.7-.02-3.38-.54-4.78-1.5-.15-.1-.29-.22-.43-.33V14.5c.02 2.37-.8 4.73-2.41 6.47-1.85 2-4.63 3.09-7.33 2.82-2.88-.22-5.61-2.09-6.85-4.72-1.39-2.86-.92-6.52 1.18-8.9a8.913 8.913 0 017.3-2.64v3.95c-1.42-.04-2.91.43-3.88 1.49-.99 1.01-1.33 2.58-.9 3.93.4 1.34 1.63 2.38 3.03 2.53 1.45.21 2.99-.33 3.8-1.55.57-.83.82-1.87.79-2.87V.02z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        
+        <div class="footer-column">
+          <span class="footer-title">Sobre la Marca</span>
+          <p class="footer-brand-copy">
+            Ediciones limitadas, diseño editorial y una estética pensada para transmitir exclusividad en cada detalle.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <span class="footer-title">Explorar</span>
+          <a href="#">Inicio</a>
+          <a href="#fiore">The Fiore Collection</a>
+          <a href="#summer">Summer Collection</a>
+        </div>
+
+        <div class="footer-column">
+          <span class="footer-title">Redes & Contacto</span>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Contacto Directo</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal-links">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Servicio</a>
+        </div>
+        <p class="footer-copy">© 2026 Blends. Todos los derechos reservados.</p>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- Modal:artagena o Mercado Libre -->
+<div class="location-modal" id="locationModal" aria-hidden="true">
+  <div class="location-modal__backdrop" data-close-modal></div>
+
+  <div class="location-modal__panel" role="dialog" aria-modal="true" aria-labelledby="locationModalTitle">
+    <button class="location-modal__close" type="button" aria-label="Cerrar" data-close-modal>×</button>
+
+    <div class="location-modal__header">
+      <p class="location-modal__eyebrow">¿Cómo quieres ver este producto?</p>
+      <h3 id="locationModalTitle" class="location-modal__title">Elige cómo quieres continuar</h3>
+      <p class="location-modal__text">
+        Beneficios disponibles en Cartagena
+      </p>
+    </div>
+
+    <div class="location-modal__actions">
+      <button type="button" class="location-modal__button location-modal__button--primary" id="cartagenaButton">
+        Estoy en Cartagena
+      </button>
+      <button type="button" class="location-modal__button location-modal__button--ghost" id="otherCitiesButton">
+        Otra Ciudad
+      </button>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
