@@ -19,7 +19,8 @@ window.addEventListener('scroll', updateNavbarState, { passive: true });
 window.addEventListener('resize', updateNavbarState);
 updateNavbarState();
 
-// Selector de ubicación para las gorras
+// ─── LÓGICA DE UBICACIÓN ───────────────────────────────────────────────────
+// Destinos por producto
 const productLinks = {
   fiore: {
     external: 'https://articulo.mercadolibre.com.co/MCO-3760020484-gorra-cachucha-pana-5-paneles-the-fiore-blends-_JM',
@@ -34,17 +35,21 @@ const productLinks = {
     cartagena: 'fiore-pack.html'
   }
 };
-// Selector simple: Cartagena o Mercado Libre
-const buyTriggers = document.querySelectorAll('.buy-trigger');
-const locationModal = document.getElementById('locationModal');
+
+const LOCATION_KEY = 'blends_location';
+
+const locationModal   = document.getElementById('locationModal');
 const cartagenaButton = document.getElementById('cartagenaButton');
 const otherCitiesButton = document.getElementById('otherCitiesButton');
-const closeModalButtons = document.querySelectorAll('[data-close-modal]');
 
-let currentProductKey = null;
+// ── Guardar ubicación y cerrar modal ─────────────────────────────────────
+function saveLocation(isCartagena) {
+  sessionStorage.setItem(LOCATION_KEY, isCartagena ? 'cartagena' : 'other');
+  closeLocationModal();
+}
 
-function openLocationModal(productKey) {
-  currentProductKey = productKey;
+// ── Abrir / cerrar modal ──────────────────────────────────────────────────
+function openLocationModal() {
   locationModal.classList.add('is-open');
   locationModal.setAttribute('aria-hidden', 'false');
 }
@@ -52,49 +57,48 @@ function openLocationModal(productKey) {
 function closeLocationModal() {
   locationModal.classList.remove('is-open');
   locationModal.setAttribute('aria-hidden', 'true');
-  currentProductKey = null;
 }
 
-buyTriggers.forEach((card) => {
+// ── Mostrar modal al cargar si aún no eligió ─────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  if (!sessionStorage.getItem(LOCATION_KEY)) {
+    openLocationModal();
+  }
+});
+
+cartagenaButton.addEventListener('click', () => saveLocation(true));
+otherCitiesButton.addEventListener('click', () => saveLocation(false));
+
+// ── Click en producto: redirigir según ubicación guardada ─────────────────
+document.querySelectorAll('.buy-trigger').forEach((card) => {
   card.addEventListener('click', () => {
     const productKey = card.dataset.product;
-    if (!productLinks[productKey]) return;
-    openLocationModal(productKey);
+    const links = productLinks[productKey];
+    if (!links) return;
+
+    const location = sessionStorage.getItem(LOCATION_KEY);
+
+    if (!location) {
+      // Si todavía no eligió, mostrar modal primero y luego redirigir
+      openLocationModal();
+
+      function onceChosen(isCartagena) {
+        cartagenaButton.removeEventListener('click', handleCartagena);
+        otherCitiesButton.removeEventListener('click', handleOther);
+        saveLocation(isCartagena);
+        const dest = isCartagena ? links.cartagena : links.external;
+        if (dest) window.location.href = dest;
+      }
+
+      function handleCartagena() { onceChosen(true); }
+      function handleOther()     { onceChosen(false); }
+
+      cartagenaButton.addEventListener('click', handleCartagena,   { once: true });
+      otherCitiesButton.addEventListener('click', handleOther, { once: true });
+      return;
+    }
+
+    const dest = location === 'cartagena' ? links.cartagena : links.external;
+    if (dest) window.location.href = dest;
   });
-});
-
-cartagenaButton.addEventListener('click', () => {
-  if (!currentProductKey) return;
-
-  const product = productLinks[currentProductKey];
-  if (!product || !product.cartagena) return;
-
-  window.open(product.cartagena, '_blank');
-  closeLocationModal();
-});
-
-otherCitiesButton.addEventListener('click', () => {
-  if (!currentProductKey) return;
-
-  const product = productLinks[currentProductKey];
-  if (!product || !product.external) return;
-
-  window.open(product.external, '_blank');
-  closeLocationModal();
-});
-
-closeModalButtons.forEach((btn) => {
-  btn.addEventListener('click', closeLocationModal);
-});
-
-locationModal.addEventListener('click', (e) => {
-  if (e.target.classList.contains('location-modal__backdrop')) {
-    closeLocationModal();
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && locationModal.classList.contains('is-open')) {
-    closeLocationModal();
-  }
 });
